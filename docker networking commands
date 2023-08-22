@@ -26,14 +26,14 @@
  2021  sudo docker ps
  2022  brctl show
  2023  sudo docker network inspect bridge
- 2024  ping -c5 172.17.0.2/16
- 2025  ping -c5 172.17.0.2
+ 2024  ping -c5 
+ 2025  ping -c5 
  2026  docker ps
  2027  sudo docker ps
  2028  docker exec -it d9850cb4916 /bin/bash
- 2029  sudo docker exec -it d9850cb4916 /bin/bash
- 2030  sudo docker exec -it d9f850cb4916 /bin/bash
- 2031  sudo docker stop d9f850cb4916
+ 2029  sudo docker exec -it /bin/bash
+ 2030  sudo docker exec -it  /bin/bash
+ 2031  sudo docker stop 
  2032  docker run --name web1 -d -p 8080:80 nginx
  2033  sudo docker run --name web1 -d -p 8080:80 nginx
  2034  history
@@ -47,20 +47,20 @@
  2042  sudo docker ps
  2043  docker swarm init --advertise-addr $(hostname -i)
  2044  sudo docker swarm init --advertise-addr $(hostname -i)
- 2045  docker swarm join --token SWMTKN-1-1zr1qxlctsz00nsik2xbd7wim3v7utwlw1jovndxlk64qgdrzi-7hl0qguzxiyrhfgl1umu5rk2v 127.0.1.1:2377
- 2046  sudo docker swarm join --token SWMTKN-1-1zr1qxlctsz00nsik2xbd7wim3v7utwlw1jovndxlk64qgdrzi-7hl0qguzxiyrhfgl1umu5rk2v 127.0.1.1:2377
+ 2045  docker swarm join --token
+ 2046  sudo docker swarm join --token 
  2047  sudo docker swarm leave
  2048  sudo docker swarm leave --force
- 2049  sudo docker swarm join --token SWMTKN-1-1zr1qxlctsz00nsik2xbd7wim3v7utwlw1jovndxlk64qgdrzi-7hl0qguzxiyrhfgl1umu5rk2v 127.0.1.1:2377
+ 2049  sudo docker swarm join --token 
  2050  sudo docker node ls
- 2051  sudo docker swarm join --token SWMTKN-1-1zr1qxlctsz00nsik2xbd7wim3v7utwlw1jovndxlk64qgdrzi-7hl0qguzxiyrhfgl1umu5rk2v 127.0.1.1:2377
+ 2051  sudo docker swarm join --token 
  2052  sudo service docker start
- 2053  sudo docker swarm join --token SWMTKN-1-1zr1qxlctsz00nsik2xbd7wim3v7utwlw1jovndxlk64qgdrzi-7hl0qguzxiyrhfgl1umu5rk2v 127.0.1.1:2377
+ 2053  sudo docker swarm join --token 
  2054  docker swarm join-token worker
  2055  sudo docker swarm join-token worker
  2056  sudo docker swarm init
- 2057  docker swarm join --token SWMTKN-1-46hn67xqjzvh1pc1dj67zrjpi23mhzneell1wamczosa5zwzc5-7p281bzddc23eephnxk3321b7 192.168.0.122:2377
- 2058  sudo docker swarm join --token SWMTKN-1-46hn67xqjzvh1pc1dj67zrjpi23mhzneell1wamczosa5zwzc5-7p281bzddc23eephnxk3321b7 192.168.0.122:2377
+ 2057  docker swarm join --token 
+ 2058  sudo docker swarm join --token 
  2059  docker swarm leave
  2060  sudo docker swarm leave
  2061  sudo docker swarm leave --force
@@ -70,9 +70,9 @@
  2065  sudo docker node ls
  2066  docker swarm init --advertise-addr $(hostname -i)
  2067  sudo docker swarm init --advertise-addr $(hostname -i)
- 2068  sudo docker swarm join --token SWMTKN-1-55po1v09o0n5idd5ussy73dvhvl09yrvx5z7n1plqijeeywhdm-1km9xbqdhgotv2eyyp8rwfci3 192.168.0.122:2377
+ 2068  sudo docker swarm join --token 
  2069  sudo docker swarm join
- 2070  sudo docker swarm join --token SWMTKN-1-55po1v09o0n5idd5ussy73dvhvl09yrvx5z7n1plqijeeywhdm-1km9xbqdhgotv2eyyp8rwfci3 192.168.0.122:2377
+ 2070  sudo docker swarm join --token 
  2071  sudo docker network create -d overlay overnet
  2072  sudo docker ls
  2073  sudo docker node ls
