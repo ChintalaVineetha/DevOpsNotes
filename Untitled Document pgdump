@@ -1,0 +1,4 @@
+/usr/bin/pg_restore --host "localhost" --port "5432" --username "postgres" --no-password --dbname "aug14moviebackupdb" --verbose "/home/isw144/aug14moviebackupdbcustom"
+
+
+/usr/bin/pg_dump --file "/home/isw144/aug14moviebackupdbcustom" --host "localhost" --port "5432" --username "postgres" --no-password --format=c --blobs --verbose "aug11db1"

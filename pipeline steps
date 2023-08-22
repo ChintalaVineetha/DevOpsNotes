@@ -1,0 +1,47 @@
+environment {
+  ENV1 = "Dev"
+  ENV2 = "Test"
+}
+
+parameters {
+  string defaultValue: '1.0.0.Warfile', description: 'Its a war file', name: 'Warfile', trim: true
+  string defaultValue: '1.0.0.Warfile', description: 'Its a war file', name: 'Warfile', trim: true
+}
+
+
+
+
+stages {
+  stage('Git clone stage') {
+    steps {
+      // One or more steps need to be included within the steps block.
+    }
+
+    tools {
+      git 'Default'
+    }
+  }
+
+  stage('Maven build stage') {
+    steps {
+      // One or more steps need to be included within the steps block.
+    }
+
+    tools {
+      maven 'Maven'
+    }
+  }
+
+  stage('Docker build stage') {
+    steps {
+      // One or more steps need to be included within the steps block.
+    }
+  }
+  stage('Final stage') {
+    steps {
+      // One or more steps need to be included within the steps block.
+    }
+  }
+
+}
+

@@ -1,0 +1,255 @@
+Maven is a build automation tool used primarily for Java projects. It provides a comprehensive build lifecycle and a powerful dependency management system. Maven operates through a series of build phases, which are defined in a project object model (POM) file called "pom.xml".
+
+Here's an overview of the Maven lifecycle and its installation process, Maven build phases, artifact, pom.xml, target folder, logs, and remaining files in that:
+
+    Maven Installation: Maven is installed on your machine by downloading and extracting the appropriate binary distribution from the Apache Maven website. Once you have installed Maven, you can use it to build any Maven project.
+
+    Maven Lifecycle: The Maven build process is organized into a series of phases, which are executed in a specific order. There are three built-in Maven lifecycles: default, clean, and site. Each lifecycle consists of a series of predefined phases, and each phase represents a specific stage of the build process.
+
+    Maven Build Phases: The Maven build process is divided into several build phases. The build phases are defined in the POM file and are executed in a specific order. The following are the build phases in Maven:
+
+a. validate: Validate the project is correct and all necessary information is available.
+
+b. compile: Compile the source code of the project.
+
+c. test: Test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed.
+
+d. package: Take the compiled code and package it in its distributable format, such as a JAR or WAR.
+
+e. verify: Run any checks on results of integration tests to ensure quality criteria are met
+
+f. install: Install the package into the local repository, for use as a dependency in other projects locally.
+
+g. deploy: Copy the final package to the remote repository for sharing with other developers and projects.
+
+    Artifact: An artifact is a file that is produced by a Maven build. Examples of artifacts include JAR files, WAR files, and EAR files. The artifact is generated during the "package" phase of the Maven build process.
+
+    pom.xml: The project object model (POM) is an XML file that contains information about the project and configuration details used by Maven to build the project. It contains information about project dependencies, build profiles, and other details related to the project.
+
+    Target Folder: The target folder is the default output directory for Maven builds. When a Maven build is executed, the output files are placed in the target directory. The target directory is created in the root directory of the project.
+
+    Logs: Maven provides detailed logs of the build process. These logs contain information about each phase of the build process, including any errors or warnings that occurred.
+
+    Remaining Files: In addition to the POM file and the target directory, there are several other files and directories that are created during the Maven build process. These files and directories include the "src" directory, which contains the project's source code, and the "bin" directory, which contains the compiled binary files. There is also a ".m2" directory, which is the local repository used by Maven to store project dependencies.
+
+
+Directory name 		Purpose
+project home 		Contains the pom.xml and all subdirectories.
+src/main/java 		Contains the deliverable Java sourcecode for the project.
+src/main/resources 	Contains the deliverable resources for the project, such as property files.
+src/test/java 		Contains the testing Java sourcecode (JUnit or TestNG test cases, for example) for the project.
+src/test/resources 	Contains resources necessary for testing. 
+    
+    
+    
+    
+ Java Life Cycle:
+
+Java follows a multi-stage life cycle which includes:
+
+    Writing the code
+    Compiling the code
+    Packaging the compiled code into executable files or JAR files
+    Deploying the executable files to a server or client machine
+    Running the application
+
+Java Installation Process:
+
+To install Java, follow the below steps:
+
+    Download the appropriate version of Java from the official website.
+    Follow the installation wizard, accept the license agreement, and choose the installation directory.
+    Set the environment variables: JAVA_HOME and PATH to the bin directory of the JDK installation.
+    Verify the installation by running "java -version" command in the terminal.
+
+JVM:
+
+JVM (Java Virtual Machine) is an abstract machine that provides a runtime environment for Java programs. JVM interprets compiled Java code and executes it on the underlying operating system. JVM provides memory management, garbage collection, security, class loading, and other runtime services to Java applications.
+
+Java Project Structure:
+
+A typical Java project structure consists of the following directories:
+
+    src/: This directory contains the source code of the application.
+    test/: This directory contains the test code of the application.
+    lib/: This directory contains third-party library dependencies of the application.
+    bin/: This directory contains compiled class files of the application.
+    docs/: This directory contains documentation related to the application.
+    config/: This directory contains configuration files of the application.
+
+application.properties:
+
+application.properties is a configuration file used by Spring Boot applications to define application-specific properties. It contains key-value pairs of properties used by the application. Spring Boot reads this file during the startup of the application and sets the properties defined in this file as application properties.
+
+
+
+
+tomcat server:
+				project
+                            |           |
+                         WEB-INF      index.html
+                            |
+              ---------------------------
+              |         |      |        |
+            web.xml    src    lib    classes
+            
+            
+            
+Nginx is a high-performance web server and reverse proxy server software. It is known for its scalability, stability, and low memory usage. Here is an overview of Nginx, its installation process, and its usage as a reverse proxy server and virtual host:
+
+    Installation: Nginx can be installed on most Linux distributions using the package manager of your choice. For example, on Ubuntu, you can use the command "sudo apt-get install nginx" to install Nginx.
+
+    Reverse Proxy: Nginx can be used as a reverse proxy server, which means that it can act as an intermediary between clients and servers. Nginx receives requests from clients and forwards them to backend servers, which can be located on the same machine or on remote servers. This can be useful for load balancing, caching, or providing SSL termination.
+
+    Virtual Host: Nginx can also be used as a virtual host server, which means that it can host multiple websites or web applications on the same server. Each website or application can have its own domain name, IP address, and configuration.
+
+    Default Port: The default port for Nginx is 80 for HTTP and 443 for HTTPS. These ports can be changed in the Nginx configuration file.
+
+    Files and Folders: Nginx stores its configuration files in the "/etc/nginx" directory. The main configuration file is "nginx.conf", which contains global settings for Nginx. Nginx also uses a directory structure for its websites and web applications. Each website or application has its own configuration file in the "/etc/nginx/sites-available" directory, which can be enabled by creating a symbolic link to the "/etc/nginx/sites-enabled" directory.
+
+    Differences between Apache and Nginx: Apache and Nginx are both popular web servers, but they have some key differences. Apache is known for its flexibility and modularity, while Nginx is known for its performance and scalability. Apache uses a multi-threaded approach to handle connections, while Nginx uses an event-driven model. Nginx also has built-in support for reverse proxying and load balancing, while Apache requires additional modules for these features.
+
+    Differences between Application Server and Web Server: An application server is a software platform that provides an environment for running web applications. It typically includes features such as transaction management, security, and clustering. A web server, on the other hand, is a software platform that provides HTTP services and serves static content such as HTML files and images. A web server can be used to host web applications, but it does not provide the advanced features of an application server.
+    
+    
+    
+Nginx vs Apache
+
+Nginx and Apache are popular web servers used to deliver web pages to a user’s browser.
+
+    Apache was released first in 1995, then came Nginx in 2004.
+    Both are used by large Fortune 500 companies around the globe.
+    Nginx market share has been steadily growing for years.
+    In some instances, Nginx has a competitive edge in terms of performance.
+    
+ It can be challenging to decide between Apache vs NGINX since they are both powerful in their own way. For instance, Apache provides a wide range of modules, while NGINX offers scalability and speed.
+
+The main difference between NGINX and Apache web servers is that NGINX has event-driven architecture handling multiple requests within a single thread, while Apache is process-driven creating a thread per each request. Thus, allowing NGINX to have generally better performance.
+
+Each software comes with its pros and cons, so deciding whether to use NGINX or Apache will depend entirely on user preferences.
+
+Let’s recap each aspect we have compared:
+
+    Basic architecture – Apache creates a single thread to handle each connection request, while a single NGINX process can simultaneously take care of multiple connections. 
+    Performance – NGINX performs faster than Apache in providing static content, but it needs help from another piece of software to process dynamic content requests. On the other hand, Apache can handle dynamic content internally.
+    Directory-level configuration – Apache comes with .htaccess files, allowing users to make changes to their site’s configuration without editing the main server settings. Meanwhile, NGINX doesn’t support directory-level configuration.
+    Modules – Apache’s modules can be loaded dynamically, while NGINX modules need to be compiled within the core software.
+    Security – both Apache and NGINX are secure and reliable. They also have several security tools to protect a site against DDoS attacks.
+    Support – Apache and NGINX offer community support and documentation to help beginners with any issues.
+
+Instead of choosing either NGINX or Apache, it can be more efficient to utilize both software to improve your server performance – NGINX as a reverse proxy server for handling static content requests and Apache as the back-end to serve dynamic content.
+
+
+
+Tomcat Server is a Java-based web application server that can be used to deploy Java web applications. It is often used for running Java Servlets and JavaServer Pages (JSPs). By default, Tomcat Server uses port 8080 for HTTP connections and port 8443 for HTTPS connections.
+
+Nginx, on the other hand, is a web server and reverse proxy server software that can be used to serve static content and act as a load balancer for web applications. By default, Nginx uses port 80 for HTTP connections and port 443 for HTTPS connections.
+
+how to setup java environment variable  in linux
+java -version
+ls /usr/lib/jvm
+default-java  java-1.11.0-openjdk-amd64  java-11-openjdk-amd64  openjdk-11
+nano ~/.bashrc
+export JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64
+export PATH=$PATH:$JAVA_HOME/bin
+source ~/.bashrc
+
+how to change default port of tomcat
+tomcat>conf folder
+Edit server.xml
+Search "Connector port"
+Replace "8080" by your port number
+Restart tomcat server.
+
+opt/tomcat/webapps$ ll
+total 28
+drwxr-x---  7 isw144 isw144 4096 Apr 13 13:40 ./
+drwxr-xr-x  9 root   root   4096 May  9 13:03 ../
+drwxr-x--- 16 isw144 isw144 4096 May  9 13:01 docs/
+drwxr-x---  7 isw144 isw144 4096 May  9 13:01 examples/
+drwxr-x---  6 isw144 isw144 4096 May  9 13:01 host-manager/
+drwxr-x---  6 isw144 isw144 4096 May  9 13:01 manager/
+drwxr-x---  3 isw144 isw144 4096 May  9 13:01 ROOT/
+
+
+
+`java`, `javac`, and `javap` are command-line tools related to Java programming. Here's a brief explanation of each:
+
+1. `java`: The `java` command is used to execute Java applications or programs. It launches the Java Virtual Machine (JVM) and runs the bytecode compiled from Java source code. To run a Java program using the `java` command, you provide the name of the class containing the `main` method as an argument. For example:
+   ```bash
+   java MyClass
+   ```
+
+2. `javac`: The `javac` command is the Java compiler. It is used to compile Java source code files (files with the `.java` extension) into bytecode (files with the `.class` extension). The `javac` command reads the source files, performs syntax and type checking, and generates the corresponding bytecode. For example:
+   ```bash
+   javac MyClass.java
+   ```
+
+3. `javap`: The `javap` command is a utility that comes with the Java Development Kit (JDK). It allows you to disassemble compiled Java bytecode and view information about classes, interfaces, and methods. It shows the structure, attributes, and bytecode instructions of the compiled Java classes. For example:
+   ```bash
+   javap -c MyClass
+   ```
+
+   This command displays the bytecode instructions (`-c` option) for the `MyClass` class.
+
+These commands are typically available after installing the Java Development Kit (JDK) on your system. Ensure that you have Java and the JDK installed properly, and that the binaries are included in your system's `PATH` environment variable.
+
+
+`systemctl` and `journalctl` are both command-line tools used in Linux systems, but they serve different purposes:
+
+1. `systemctl`: `systemctl` is a command-line utility used for controlling and managing the systemd system and service manager. It provides an interface to start, stop, enable, disable, reload, and query the status of systemd units, such as services, sockets, timers, and more. It is used to manage the overall system state and configuration.
+
+   Here are some common `systemctl` commands:
+   - Start a service: `systemctl start service_name`
+   - Stop a service: `systemctl stop service_name`
+   - Enable a service to start at boot: `systemctl enable service_name`
+   - Disable a service from starting at boot: `systemctl disable service_name`
+   - Restart a service: `systemctl restart service_name`
+   - Check the status of a service: `systemctl status service_name`
+
+2. `journalctl`: `journalctl` is a command-line utility used to query and view logs from the systemd journal. The systemd journal is a centralized log storage system that collects logs from various sources on the system, including services, the kernel, and other system components. `journalctl` allows you to filter and search through the logs based on various criteria, such as time range, specific units, log levels, and more.
+
+   Here are some common `journalctl` commands:
+   - View all logs: `journalctl`
+   - Filter logs for a specific unit: `journalctl -u unit_name`
+   - Show logs from the current boot: `journalctl -b`
+   - Display logs from a specific time range: `journalctl --since "YYYY-MM-DD HH:MM:SS" --until "YYYY-MM-DD HH:MM:SS"`
+   - Follow real-time logs: `journalctl -f`
+
+   `journalctl` provides powerful filtering and querying capabilities to help you analyze and troubleshoot system logs efficiently.
+
+In summary, `systemctl` is used for managing systemd units and controlling system services, while `journalctl` is used for viewing and analyzing system logs stored in the systemd journal.
+
+
+
+
+The Apache Tomcat server, commonly referred to as Tomcat, has a component called "Catalina," The name "Catalina" was chosen as a reference to the southern California city of Santa Catalina, known for its beautiful beaches and relaxed atmosphere. 
+
+The developers of Tomcat wanted to reflect the server's lightweight and easy-to-use nature, much like the spirit of Santa Catalina. The name "Catalina" was chosen to evoke a sense of simplicity, elegance, and enjoyment, similar to the experience of using Tomcat as a web server. 
+
+The Catalina component in Tomcat is responsible for implementing the core functionality of the server, including the servlet container, which processes and manages Java servlets.
+
+
+
+
+
+
+        openjdk : Is the most stable one. It was designed for all the platforms. It is basically targeting Open-source platforms.
+
+        default-jdk : Is not stable. It was designed aiming certain target platforms. It is basically targeting Closed platforms.( Was later available for Open-Source) JRE s are in this.
+        
+        
+        
+        
+        
+The command "netstat -plntu" is a commonly used networking command in Unix-like operating systems, including Linux. It provides information about network connections, ports, and related processes. Here's the breakdown of the command options:
+
+- "-p": Displays the PID (process identifier) and program name associated with each network connection. This option requires administrative privileges (root or sudo).
+- "-l": Shows only listening sockets (servers) that are actively listening for incoming connections.
+- "-n": Displays numeric IP addresses and port numbers instead of resolving them to hostnames or service names.
+- "-t": Shows only TCP (Transmission Control Protocol) connections.
+- "-u": Shows only UDP (User Datagram Protocol) connections.
+
+So, when you run the command "netstat -plntu," you will see a list of active TCP and UDP connections, along with their corresponding ports, the process IDs (PIDs), and the program names that are using those connections. It is a useful command for monitoring network activity and identifying which processes are using specific network ports.
+
+
